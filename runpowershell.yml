@@ -1,0 +1,8 @@
+---
+# This playbook tests the script module on Windows hosts
+- name: Run powershell script
+  hosts: wintel
+  gather_facts: false
+  tasks:
+    - name: Run powershell script
+      win_shell: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy ByPass -File C:\Users\kumaresan.palanisamy\helloworld.ps1
